@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="assignments\Day4\Day4.txt" />
     <None Remove="assignments\DayOne\DayOne.txt" />
     <None Remove="assignments\DayThree\DayThree.txt" />
     <None Remove="assignments\DayTwo\DayTwo.txt" />
@@ -15,6 +16,9 @@
 
   <ItemGroup>
     <Content Include="assignments\DayOne\DayOne.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day4\Day4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assignments\DayThree\DayThree.txt">

@@ -2,7 +2,7 @@
 using AdventOfCode21.assignments;
 using AdventOfCode21.common;
 
-IAoCEntity aoc = new DayThree();
+IAoCEntity aoc = new Day4();
 
 Console.WriteLine(aoc.GetResult1());
 Console.WriteLine(aoc.GetResult2());
