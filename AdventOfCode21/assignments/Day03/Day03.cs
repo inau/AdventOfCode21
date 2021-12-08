@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode21.assignments
 {
-    internal class DayThree : Common
+    internal class Day03 : Common
     {
-        public DayThree() : base("DayThree") {}
+        public Day03() : base("Day03") {}
 
         struct FreqTable
         {

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode21.assignments
 {
-    internal class DayTwo : Common
+    internal class Day02 : Common
     {
-        public DayTwo() : base("DayTwo") {}
+        public Day02() : base("Day02") {}
 
         struct Command
         {

@@ -9,15 +9,15 @@ namespace AdventOfCode21.assignments
 {
     internal abstract class Common : IAoCEntity
     {
-        protected string name { get; private set; }
+        public string Name { get; private set; }
         public Common(string DayName)
         {
-            name = DayName;
+            Name = DayName;
         }
 
         public FileStream GetInput()
         {
-            return File.OpenRead($"assignments//{name}//{name}.txt");
+            return File.OpenRead($"assignments//{Name}//{Name}.txt");
         }
 
         public abstract string GetResult1();

@@ -8,23 +8,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="assignments\Day4\Day4.txt" />
-    <None Remove="assignments\DayOne\DayOne.txt" />
-    <None Remove="assignments\DayThree\DayThree.txt" />
-    <None Remove="assignments\DayTwo\DayTwo.txt" />
+    <None Remove="assignments\Day01\Day01.txt" />
+    <None Remove="assignments\Day02\Day02.txt" />
+    <None Remove="assignments\Day04\Day04.txt" />
+    <None Remove="assignments\Day03\Day03.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="assignments\DayOne\DayOne.txt">
+    <Content Include="assignments\Day01\Day01.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assignments\Day4\Day4.txt">
+    <Content Include="assignments\Day04\Day04.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assignments\DayThree\DayThree.txt">
+    <Content Include="assignments\Day03\Day03.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="assignments\DayTwo\DayTwo.txt">
+    <Content Include="assignments\Day02\Day02.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

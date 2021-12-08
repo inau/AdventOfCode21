@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode21.assignments
 {
-    internal class DayOne : Common
+    internal class Day01 : Common
     {
-        public DayOne() : base("DayOne") {}
+        public Day01() : base("Day01") {}
 
         public override string GetResult1()
         {
