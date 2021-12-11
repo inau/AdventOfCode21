@@ -15,9 +15,34 @@ namespace AdventOfCode21.assignments
             Name = DayName;
         }
 
-        public FileStream GetInput()
+        public Stream GetSimpleInput()
         {
-            return File.OpenRead($"assignments//{Name}//{Name}.txt");
+            return File.OpenRead(CreateRelativePath($"{Name}simple"));
+        }
+
+        protected string CreateRelativePath(string name)
+        {
+            return $"assignments//{Name}//{name}.txt";
+        }
+
+        public Stream GetInput()
+        {
+            return File.OpenRead( CreateRelativePath(Name) );
+        }
+
+        protected T InitReader<T>(bool simpleInput, Func<StreamReader, T> Handler)
+        {
+            using var input = new StreamReader((!simpleInput ? GetInput() : GetSimpleInput()));
+            return Handler(input);
+        }
+        
+
+        protected IEnumerable<string> ParseLines(StreamReader reader)
+        {
+            for(string? line = reader.ReadLine(); line != null; line = reader.ReadLine())
+            {
+                yield return line;
+            }
         }
 
         public abstract string GetResult1();

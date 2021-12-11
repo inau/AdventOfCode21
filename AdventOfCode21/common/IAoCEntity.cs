@@ -9,7 +9,8 @@ namespace AdventOfCode21.common
     internal interface IAoCEntity
     {
         string Name { get;}
-        FileStream GetInput();
+        Stream GetInput();
+        Stream GetSimpleInput();
         string GetResult1();
         string GetResult2();
     }

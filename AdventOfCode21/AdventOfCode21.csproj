@@ -12,10 +12,58 @@
     <None Remove="assignments\Day02\Day02.txt" />
     <None Remove="assignments\Day04\Day04.txt" />
     <None Remove="assignments\Day03\Day03.txt" />
+    <None Remove="assignments\Day05\Day05.txt" />
+    <None Remove="assignments\Day05\Day05simple.txt" />
+    <None Remove="assignments\Day06\Day06.txt" />
+    <None Remove="assignments\Day06\Day06simple.txt" />
+    <None Remove="assignments\Day07\Day07.txt" />
+    <None Remove="assignments\Day07\Day07simple.txt" />
+    <None Remove="assignments\Day08\Day08.txt" />
+    <None Remove="assignments\Day08\Day08simple.txt" />
+    <None Remove="assignments\Day09\Day09.txt" />
+    <None Remove="assignments\Day09\Day09simple.txt" />
+    <None Remove="assignments\template\DayXX.txt" />
+    <None Remove="assignments\template\DayXXsimple.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="assignments\Day01\Day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\template\DayXX.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\template\DayXXsimple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day09\Day09.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day09\Day09simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day08\Day08.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day08\Day08simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day07\Day07.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day07\Day07simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day06\Day06.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day06\Day06simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day05\Day05simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day05\Day05.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assignments\Day04\Day04.txt">
