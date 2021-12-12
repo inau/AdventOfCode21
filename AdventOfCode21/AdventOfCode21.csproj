@@ -22,12 +22,36 @@
     <None Remove="assignments\Day08\Day08simple.txt" />
     <None Remove="assignments\Day09\Day09.txt" />
     <None Remove="assignments\Day09\Day09simple.txt" />
+    <None Remove="assignments\Day10\Day10.txt" />
+    <None Remove="assignments\Day10\Day10simple.txt" />
+    <None Remove="assignments\Day11\Day11.txt" />
+    <None Remove="assignments\Day11\Day11simple.txt" />
+    <None Remove="assignments\Day12\Day12.txt" />
+    <None Remove="assignments\Day12\Day12simple.txt" />
     <None Remove="assignments\template\DayXX.txt" />
     <None Remove="assignments\template\DayXXsimple.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="assignments\Day01\Day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day10\Day10.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day10\Day10simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day11\Day11.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day11\Day11simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day12\Day12.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assignments\Day12\Day12simple.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assignments\template\DayXX.txt">

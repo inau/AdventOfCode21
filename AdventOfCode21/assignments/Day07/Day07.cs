@@ -33,15 +33,15 @@ namespace AdventOfCode21.assignments
         {
             var distanceTable = new Dictionary<int,long>();
 
-            for(int i = 4; i < positions.Count; i++)
+            for(int i = 0; i < positions.Count; i++)
             {
                 int fuelSum = 0;
                 int pos1 = positions[i];
                 for (int j = 0; j < positions.Count; j++)
                 {
                     int pos2 = positions[j];
-                    int d = GetDist(pos1, pos2);
-                    int fuel = fn(d);
+                    int dist = GetDist(pos1, pos2);
+                    int fuel = fn(dist);
                     fuelSum += fuel;
                 }
                 distanceTable.Add(i, fuelSum);
@@ -58,6 +58,37 @@ namespace AdventOfCode21.assignments
                 result[10] == 71;
         }
 
+        class CrabSubmarineMeta
+        {
+            public struct OtherSub 
+            { 
+                public int Position { get; init; }
+                public int Distance { get; init; }
+            }
+            public int          Position { get; init; }
+            public OtherSub[]?  Others { get; init; }
+        //    public long         TotalCost { get; init; }
+        }
+
+        CrabSubmarineMeta GetSubCostTable(int testposition, List<int> positions)
+        {
+            List<CrabSubmarineMeta.OtherSub> others = new List<CrabSubmarineMeta.OtherSub>();
+            for (int i = 0; i < positions.Count; i++)
+            {
+                var pos = positions[i];
+                others.Add(new CrabSubmarineMeta.OtherSub
+                {
+                    Position = pos,
+                    Distance = GetDist(testposition, pos),
+                });
+            }
+
+            return new CrabSubmarineMeta
+            {
+                Position = testposition,
+                Others = others.ToArray(),
+            };
+        }
 
         public override string GetResult1()
         {
@@ -79,8 +110,9 @@ namespace AdventOfCode21.assignments
 
         public override string GetResult2()
         {
-            List<int> sequence = GetInputSequence().ToList();
-
+            List<int> sequence = GetInputSequence(false).ToList();
+            int upperBound = sequence.Max();
+            
             Func<int, int> distanceCalc = (x) =>
              {
                  int r = 0;
@@ -91,10 +123,15 @@ namespace AdventOfCode21.assignments
                  return r;
              };
 
-            var table = CreateDistanceTable(sequence,distanceCalc);
-            var best = table.OrderBy(v => v.Value).Take(10).ToList();
+            long cheapest = long.MaxValue;
+            for(int i = 0; i < upperBound; ++i)
+            {
+                var subMeta = GetSubCostTable(i, sequence);
+                long distances = subMeta.Others.Select(x => distanceCalc(x.Distance)).Sum();
+                if(distances < cheapest) cheapest = distances;
+            }
 
-            return $"{best.First().Value}";
+            return $"{cheapest}";
         }
     }
 }

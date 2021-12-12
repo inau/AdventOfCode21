@@ -9,6 +9,7 @@ namespace AdventOfCode21.assignments
 {
     internal abstract class Common : IAoCEntity
     {
+        static public bool PrintDebug { get; set; } = false;
         public string Name { get; private set; }
         public Common(string DayName)
         {

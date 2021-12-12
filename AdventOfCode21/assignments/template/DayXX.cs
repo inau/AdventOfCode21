@@ -13,20 +13,22 @@ namespace AdventOfCode21.assignments
 
         public IEnumerable<int> GetInputSequence(bool simpleInput = false)
         {
-            return InitReader<IEnumerable<int>>(simpleInput, (reader) =>
+            return InitReader(simpleInput, (reader) =>
             {
+                IEnumerable<int> returnData = new List<int>();
                 var lineStream = ParseLines(reader);
                 foreach (var line in lineStream)
                 {
-                    return line.Split(",").Select(x=>int.Parse(x)).ToList();
+                    returnData = line?.Split(",").Select(x=>int.Parse(x)).ToList();
                 }
-                return null;
+                return returnData;
             });
         }
 
+        bool UseSimpleInput = false;
         public override string GetResult1()
         {
-            List<int> sequence = GetInputSequence().ToList();
+            var sequence = GetInputSequence(UseSimpleInput).ToList();
 
             var result = "";
             
@@ -36,7 +38,7 @@ namespace AdventOfCode21.assignments
 
         public override string GetResult2()
         {
-            List<int> sequence = GetInputSequence().ToList();
+            var sequence = GetInputSequence(UseSimpleInput).ToList();
 
             var result = "";
 
